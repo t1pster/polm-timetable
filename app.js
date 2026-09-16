@@ -1,7 +1,7 @@
 const $=id=>document.getElementById(id),G=$("grid"),B=$("board"),M=$("modal"),S=$("sheet"),TM=$("tm"),TS=$("ts");
 const TIMES=T.filter(t=>mm(t)<=mm("19:55")),DEFAULT_COLOR="#3e88b4";
 let E=load(),edit=null,gesture=null,press=null,fitScale=1;
-function mm(t){const[a,b]=t.split(":").map(Number);return a*60+b}function ff(v){v=Math.round(v);return String(Math.floor(v/60)).padStart(2,"0")+":"+String(v%60)}
+function mm(t){const[a,b]=t.split(":").map(Number);return a*60+b}function ff(v){v=Math.round(v);return String(Math.floor(v/60)).padStart(2,"0")+":"+String(v%60).padStart(2,"0")}
 function esc(s){return String(s??"").replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]))}
 function clean(s){return String(s||"").replace(/\s*\(profilový predmet\)/gi,"").replace(/\s*\(PP\)/gi,"").trim()}
 function load(){try{const x=JSON.parse(localStorage.getItem(K));if(Array.isArray(x)&&x.length)return x.map((e,i)=>({...e,id:e.id||"e"+i,color:e.color||DEFAULT_COLOR,cancelled:!!e.cancelled}))}catch{}return raw.map((e,i)=>({...e,id:"s"+i,color:e.color||DEFAULT_COLOR,cancelled:false}))}
