@@ -1,0 +1,1 @@
+(()=>{const B=document.getElementById('board');if(!B)return;B.addEventListener('pointerdown',e=>{if(e.pointerType!=='touch')return;const el=e.target.closest('.event');if(!el||e.target.closest('.hy'))return;try{el.setPointerCapture(e.pointerId)}catch{}},{capture:true,passive:false});})();
