@@ -1,0 +1,1 @@
+(()=>{const add=EventTarget.prototype.addEventListener;EventTarget.prototype.addEventListener=function(type,listener,options){if(this&&this.id==='board'&&/^touch(start|move|end|cancel)$/.test(type))return;if(this===document&&/^gesture(start|change|end)$/.test(type))return;return add.call(this,type,listener,options)}})();
