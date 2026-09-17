@@ -1,11 +1,11 @@
 /* Mobile-first timetable refinement: one typography system, visible details, stable FIT, reliable touch drag. */
-.board{position:relative;background:#0b1117}
+.board{position:relative;background:#0b1117;width:fit-content;max-width:100%;align-self:flex-start}
 .gridStage{position:relative;transform:none;flex:none}
 .fitBtn{position:static!important;width:40px!important;height:40px!important;min-width:40px!important;font-size:10px!important;border-radius:11px!important;box-shadow:0 8px 24px #000d;touch-action:manipulation}
 .time{font-size:10.5px;line-height:1;padding-top:7px;font-weight:850;white-space:nowrap;letter-spacing:-.01em}
 .corner{font-size:9px;line-height:1}
 .day{font-size:10.5px}
-.event{padding:6px 7px 17px;touch-action:pan-x pan-y}
+.event{padding:6px 7px 17px;touch-action:manipulation}
 .event.dragging,.event.resizing{touch-action:none}
 .content{display:grid;grid-template-rows:minmax(0,1fr) auto auto;gap:2px;height:100%;min-width:0;overflow:hidden}
 .name{font-size:12.3px!important;line-height:1.04!important;letter-spacing:-.012em!important;font-weight:900!important;overflow-wrap:break-word!important;word-break:normal!important;display:block;overflow:hidden;text-wrap:pretty}
